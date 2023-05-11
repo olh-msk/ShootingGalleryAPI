@@ -8,19 +8,19 @@ namespace ShootingGalleryAPI.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class DimCustomerLevelController : ControllerBase
+    public class DimDateController : ControllerBase
     {
-        private readonly DimCustomerLevelDbContext _context;
+        private readonly DimDateDbContext _context;
 
-        public DimCustomerLevelController(DimCustomerLevelDbContext context)
+        public DimDateController(DimDateDbContext context)
         {
             _context = context;
         }
 
         [HttpGet]
-        public ActionResult<IEnumerable<DimCustomerLevels>> Get()
+        public ActionResult<IEnumerable<DimDate>> Get()
         {
-            var list = _context.DimCustomerLevel.ToList();
+            var list = _context.DimDate.ToList();
 
             return Ok(list);
         }

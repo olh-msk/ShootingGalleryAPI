@@ -33,6 +33,14 @@ namespace ShootingGalleryAPI
                 options.UseSqlServer(Configuration.GetConnectionString("UserDb")));
             services.AddDbContext<DimCustomerLevelDbContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("UserWarehouse")));
+            services.AddDbContext<DimGalleryDbContext>(options =>
+                options.UseSqlServer(Configuration.GetConnectionString("UserWarehouse")));
+            services.AddDbContext<DimDateDbContext>(options =>
+                options.UseSqlServer(Configuration.GetConnectionString("UserWarehouse")));
+            services.AddDbContext<DimGunDbContext>(options =>
+                options.UseSqlServer(Configuration.GetConnectionString("UserWarehouse")));
+            services.AddDbContext<FactSessionDbContext>(options =>
+                options.UseSqlServer(Configuration.GetConnectionString("UserWarehouse")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

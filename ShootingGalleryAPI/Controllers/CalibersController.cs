@@ -20,9 +20,9 @@ namespace ShootingGalleryAPI.Controllers
         [HttpGet]
         public ActionResult<IEnumerable<Calibers>> Get()
         {
-            var calibers = _context.Calibers.ToList();
+            var list = _context.Calibers.ToList();
 
-            return Ok(calibers);
+            return Ok(list);
         }
     }
 }
