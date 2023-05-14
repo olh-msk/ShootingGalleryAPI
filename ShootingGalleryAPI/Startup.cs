@@ -41,6 +41,8 @@ namespace ShootingGalleryAPI
                 options.UseSqlServer(Configuration.GetConnectionString("UserWarehouse")));
             services.AddDbContext<FactSessionDbContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("UserWarehouse")));
+            services.AddDbContext<FactShowDbContext>(options =>
+                options.UseSqlServer(Configuration.GetConnectionString("UserWarehouse")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
